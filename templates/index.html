@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Alexis Dougherty Portfolio's</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+        </script>
+        <![endif]-->
+        <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js">
+        </script>
+        <![endif]-->
+    </head>
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif;}
+		* {box-sizing: border-box;}
+
+		.open-button {
+		  background-color: #555;
+		  color: white;
+		  padding: 16px 20px;
+		  border: none;
+		  cursor: pointer;
+		  opacity: 0.8;
+		  position: fixed;
+		  bottom: 23px;
+		  right: 28px;
+		  width: 280px;
+		}
+
+		.chat-popup {
+		  display: none;
+		  position: fixed;
+		  bottom: 0;
+		  right: 15px;
+		  border: 3px solid #f1f1f1;
+		  z-index: 9;
+		}
+
+		.form-container {
+		  max-width: 300px;
+		  padding: 10px;
+		  background-color: white;
+		}
+
+		.form-container textarea {
+		  width: 100%;
+		  padding: 15px;
+		  margin: 5px 0 22px 0;
+		  border: none;
+		  background: #f1f1f1;
+		  resize: none;
+		  min-height: 200px;
+		}
+
+		.form-container textarea:focus {
+		  background-color: #ddd;
+		  outline: none;
+		}
+
+		.form-container .btn {
+		  background-color: #4CAF50;
+		  color: white;
+		  padding: 16px 20px;
+		  border: none;
+		  cursor: pointer;
+		  width: 100%;
+		  margin-bottom:10px;
+		  opacity: 0.8;
+		}
+
+		.form-container .cancel {
+		  background-color: red;
+		}
+
+		.form-container .btn:hover, .open-button:hover {
+		  opacity: 1;
+		}
+		
+		
+		
+		.filterDiv {
+		  float: left;
+		  background-color: #2196F3;
+		  color: #ffffff;
+		  width: 300px;
+		  line-height: 100px;
+		  text-align: center;
+		  margin: 10px;
+		  display: none;
+		}
+
+		.show {
+		  display: block;
+		}
+
+		.container {
+		  margin-top: 20px;
+		  overflow: hidden;
+		}
+
+		.btn {
+		  border: none;
+		  outline: none;
+		  padding: 12px 16px;
+		  background-color: #f1f1f1;
+		  cursor: pointer;
+		}
+
+		.btn:hover {
+		  background-color: #ddd;
+		}
+
+		.btn.active {
+		  background-color: #666;
+		  color: white;
+		}
+		
+		breakFloat {
+		  float: none;
+		}
+		
+		main {
+			padding: 5em;
+		}
+		
+		
+		
+		
+		.container {
+		  position: relative;
+		  width: 50%;
+		}
+
+		.image {
+		  display: block;
+		  width: 100%;
+		  height: auto;
+		}
+
+		.overlay {
+		  position: absolute;
+		  top: 0;
+		  bottom: 0;
+		  left: 0;
+		  right: 0;
+		  height: 100%;
+		  width: 100%;
+		  opacity: 0;
+		  transition: .5s ease;
+		  background-color: #008CBA;
+		}
+
+		.container:hover .overlay {
+		  opacity: 1;
+		}
+
+		.text {
+		  color: white;
+		  font-size: 20px;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  -webkit-transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  transform: translate(-50%, -50%);
+		  text-align: center;
+		}
+
+		
+	</style>
+    <body>
+        <header role="banner"> 
+            <h1>Alexis Dougherty</h1> 
+        </header>
+        <nav role="navigation">
+            <div class="wrapper">
+				<a href="#about">About Me</a>
+                <a href="#education">Education</a>
+                <a href="#proexperience">Professional Experience</a> 
+                <a href="#volexpereince">Volunteer Experience</a>
+                <a href="#projects">Projects</a>
+				<a href="#resume">Resume</a>
+				<a href="#other">More Info</a>
+				<a href="#contact">Contact</a> 
+            </div>
+        </nav>
+        <div class="wrapper">
+        <main role="main">
+			<button class="open-button" onclick="openForm()">Chat</button>
+			
+            <h2 id="about">About Me</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			
+			<h2 id="education">Education</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			
+			<h2 id="proexperience">Professional Experience</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<h2 id="volexpereince">Volunteer Experience</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<h2 id="projects">Projects</h2>
+			<div id="filters">
+			  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			  <button class="btn" onclick="filterSelection('Individual')"> Individual</button>
+			  <button class="btn" onclick="filterSelection('Team')"> Team</button>
+			  <button class="btn" onclick="filterSelection('C++')"> C++</button>
+			  <button class="btn" onclick="filterSelection('Python')"> Python</button>
+			  <button class="btn" onclick="filterSelection('HTML/CSS/JavaScript')"> HTML/CSS/JavaScript</button>
+			  <button class="btn" onclick="filterSelection('InProgress')"> In Progress</button>
+			  <button class="btn" onclick="filterSelection('Complete')"> Complete</button>
+			  <button class="btn" onclick="filterSelection('Incomplete')"> Incomplete</button>
+			  <button class="btn" onclick="filterSelection('Obsolete')"> Obsolete</button>
+			</div>
+			
+			<div class="projects">
+			  <div class="filterDiv Team C++ Incomplete Obsolete"><a href="#link">Swamphacks V: Duel<br><small>Team C++ Incomplete Obsolete</small></a></div>
+			  <div class="filterDiv Team HTML/CSS/JavaScript Complete"><a href="#link">Swamphacks VI: Credit Converter<br><small>Team Web Complete"</small></a></div>
+			  <div class="filterDiv Team Python Complete"><a href="#link">CIS4930: Duel<br><small>Team Python Complete</small></a></div>
+			  <div class="filterDiv Individual Python HTML/CSS/Javascript Complete"><a href="#link">Elimination<br><small>Individual Python Web Complete</small></a></div>
+			  <div class="filterDiv Individual Python HTML/CSS/JavaScript Complete"><a href="#link">Virtual Apples to Apples<br><small>Individual Python Web Complete</small></a></div>
+			  <div class="filterDiv Individual Python HTML/CSS/JavaScript Complete"><a href="#link">Virtual Clue<br><small>Individual Python Web Complete</small></a></div>
+			  <div class="filterDiv Individual Python HTML/CSS/JavaScript Complete"><a href="#link">PaperCut<br><small>Individual Python Web Complete</small></a></div>
+			  <div class="filterDiv Individual Python HTML/CSS/JavaScript Incomplete"><a href="#link">Home Lazer Tag<br><small>Individual Python Web Incomplete</small></a></div>
+			  <div class="filterDiv Individual Python Incomplete"><a href="#link">Kurious<br><small>Individual Python Incomplete</small></a></div>
+			  <div class="filterDiv Individual C++ Complete"><a href="#link">ZEBRA<br><small>Individual C++ Complete</small></a></div>
+			  <div class="filterDiv Team Python InProgress"><a href="#link">Timely<br><small>Team Python In Progress</small></a></div>
+			  <div class="filterDiv Individual C++ Complete"><a href="#link">COP3503: Minesweeper<br><small>Individual C++ Complete</small></a></div>
+			  <div class="filterDiv Individual Python C++ Complete"><a href="#link">Project 2 Autograder<br><small>Individual Python C++ Complete</small></a></div>
+			  <div class="filterDiv Individual Web Complete"><a href="#link">Your Best Friend's Friend<br><small>Individual Web Complete</small></a></div>
+			</div><br><br>
+
+			<h2 id="resume">Resume</h2>
+			<a href="#DOWNLOADRESUME">Download my resume</a>
+			<p>Find me on <a href="https://www.linkedin.com/in/alexis-dougherty-361b12199/">Linked In</a></p>
+			
+			<h2 id="other">More Info</h2>
+			<p>This section is for all the parts that do not fit in any other category.</p>
+
+			<h2 id="contact">Contact</h2>
+			<p>Phone: <a href="sms: 478-832-8697">(478) 832-8697</a></p>
+			<p>Email: <a href="mailto:alexismonetdougherty@gmail.com">AlexisMonetDougherty@gmail.com</a></p>
+
+        </main>
+        <footer role="contentinfo">
+			  <div class="chat-popup" id="chatbox">
+			  <form action="/action_page.php" class="form-container">
+				<h1>Contact Me</h1>
+				<p>If you want to hi, just leave me a message. :-)</p>
+				<label for="name"><b>Name </b></label>
+				<input type="text" name="name" required><br><br>
+				<label for="email"><b>Email </b></label>
+				<input type="text" name="email" required><br><br>
+				<label for="phone"><b>Phone </b></label>
+				<input type="text" name="phone"><br><br>
+				<label for="msg"><b>Message</b></label>
+				<textarea placeholder="Type message.." name="msg" required></textarea>
+
+				<button type="submit" class="btn">Send</button>
+				<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+			  </form>
+			</div>
+        </footer>
+        </div>
+    </body>
+	<script>
+		function openForm() 
+		{
+		  document.getElementById("chatbox").style.display = "block";
+		}
+
+		function closeForm() 
+		{
+		  document.getElementById("chatbox").style.display = "none";
+		}
+		
+		filterSelection("all")
+		function filterSelection(c) 
+		{
+		  var x, i;
+		  x = document.getElementsByClassName("filterDiv");
+		  if (c == "all") c = "";
+		  for (i = 0; i < x.length; i++) {
+			w3RemoveClass(x[i], "show");
+			if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+		  }
+		}
+
+		function w3AddClass(element, name) 
+		{
+		  var i, arr1, arr2;
+		  arr1 = element.className.split(" ");
+		  arr2 = name.split(" ");
+		  for (i = 0; i < arr2.length; i++) {
+			if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+		  }
+		}
+
+		function w3RemoveClass(element, name) 
+		{
+		  var i, arr1, arr2;
+		  arr1 = element.className.split(" ");
+		  arr2 = name.split(" ");
+		  for (i = 0; i < arr2.length; i++) {
+			while (arr1.indexOf(arr2[i]) > -1) {
+			  arr1.splice(arr1.indexOf(arr2[i]), 1);     
+			}
+		  }
+		  element.className = arr1.join(" ");
+		}
+
+		var btnContainer = document.getElementById("myBtnContainer");
+		var btns = btnContainer.getElementsByClassName("btn");
+		for (var i = 0; i < btns.length; i++) {
+		  btns[i].addEventListener("click", function(){
+			var current = document.getElementsByClassName("active");
+			current[0].className = current[0].className.replace(" active", "");
+			this.className += " active";
+		  });
+		}
+	</script>
+</html>
